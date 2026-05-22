@@ -1,12 +1,13 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: coral;
+    background-color: navy;
+    color: white;
 }
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
+    background-color: rgb(255, 222, 150);
+    color: rgb(20, 20, 20);
+    text-decoration: solid;
     border-radius: 5px;
 }
