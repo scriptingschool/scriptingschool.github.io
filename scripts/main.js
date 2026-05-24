@@ -1,15 +1,16 @@
 const titleElement = document.getElementById("main-title");
 const sloganElement = document.getElementById("slogan");
 var typeEffect = (element, spacingTimeMS, endingFunction) => {
-    // Reset the original text
-    element.textContent = "";
-    
     // Variables to help us
     const originalElementContent = element.textContent.split("");
     const originalLen = originalElementContent.length;
     let len = 0;
     let currentText = "";
 
+    // Reset the original text
+    element.textContent = "";
+
+    // Do like the type effect
     const intervalId = setInterval(() => {
         currentText = currentText + originalElementContent[len];
         element.textContent = currentText + "|";
