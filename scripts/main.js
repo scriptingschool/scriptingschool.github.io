@@ -7,6 +7,8 @@ titleElement.textContent = "";
 const intervalId = setInterval(() => {
     currentText = currentText + originalTitleContent[len];
     titleElement.textContent = currentText + "|";
+
+    console.log(`Status: ${len} // ${originalLen}`)
     
     len++;
     if (len === originalLen) {
