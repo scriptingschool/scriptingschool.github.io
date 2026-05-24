@@ -1,8 +1,15 @@
+// elemNETS
 const titleElement = document.getElementById("main-title");
+const titleElementOGTEXT = titleElement.textContent
+titleElement.textContent = ""
 const sloganElement = document.getElementById("slogan");
-var typeEffect = (element, spacingTimeMS, endingFunction) => {
+const sloganElementOGText = sloganElement.textContent;
+sloganElement.textContent = ""
+
+// function
+var typeEffect = (element, ogText, spacingTimeMS, endingFunction) => {
     // Variables to help us
-    const originalElementContent = element.textContent.split("");
+    const originalElementContent = ogText.split("");
     const originalLen = originalElementContent.length;
     let len = 0;
     let currentText = "";
@@ -28,8 +35,8 @@ var typeEffect = (element, spacingTimeMS, endingFunction) => {
     }, spacingTimeMS);
 }
 
-typeEffect(titleElement, 100, () => {
+typeEffect(titleElement, titleElementOGTEXT, 75, () => {
     setTimeout(() => {
-        typeEffect(sloganElement, 125);
-    }, 750);
+        typeEffect(sloganElement, sloganElementOGText, 90);
+    }, 400);
 });
